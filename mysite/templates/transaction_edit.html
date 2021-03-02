@@ -1,0 +1,20 @@
+{% extends "data_edit.html" %}
+{% load i18n %}
+{% block addjs %}
+$(function(){
+$("#id_UserID").empty();
+	var pid=$("#id_UserID").val()
+	var html='<select name="UserID" id="id_UserID"><option value="">---------</option>'+
+	{% for row in Company_list %}'<option value="{{ row.company }}" '+({{ row.company }}==pid?'selected':'')+'>{{ row }}</option>'+
+	{% endfor %}'</select>';
+	$("#id_company").parent().html(html)
+
+
+var pid=$("#id_SN").val()
+var html='<select name="SN" id="id_SN"><option value="">---------</option>'+
+{% for row in SN_list %}'<option value="{{ row.SN }}" '+({{ row.SN }}==pid?'selected':'')+'>{{ row }}</option>'+
+{% endfor %}'</select>';
+$("#id_SN").parent().html(html)
+
+});
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends "data_edit.html" %}
+{% load i18n %}
+{% block addjs %}
+function setSN() {
+    $("#txtSN").val($("#md_slt").val());
+}
+
+$(function(){
+    $("input[name='Card']").keyup(function(){
+            var tmptxt=$(this).val();
+            $(this).val(tmptxt.replace(/\D/g,''));
+        }).bind("paste",function(){
+            var tmptxt=$(this).val();
+            $(this).val(tmptxt.replace(/\D/g,''));
+        }).css("ime-mode", "disabled");
+
+    $("#id_id_company").empty();
+    var pid=$("#id_company").val()
+    var html='<select name="company" id="id_company"><option value="">---------</option>'+
+    {% for row in Company_list %}'<option value="{{ row.companyid }}" '+({{ row.companyid }}==pid?'selected':'')+'>{{ row }}</option>'+
+    {% endfor %}'</select>';
+    $("#id_company").parent().html(html)
+
+    $("#id_company").change(function(){
+        $('#id_DeptID option:selected').removeAttr('selected')
+        options = $('#id_company option:selected').val()
+        var pid=$("#id_DeptID").val()
+        var html='<select name="DeptID" id="id_DeptID"><option value="">---------</option>'+
+        {% for row in DeptID_list %}'<option value="{{ row.DeptID }}" '+({{ row.DeptID }}==pid?'selected="selected"':'') +({{ row.company_id }}==options?'':'hidden="hidden"')+'>{{ row }}</option>'+
+        {% endfor %}'</select>';
+        $("#id_DeptID").parent().html(html)
+        $("#id_DeptID option:hidden").each(function(){
+            $(this).remove();
+        });
+    });
+    $("#id_company").each(function(){
+        options = $('#id_company option:selected').val()
+        var pid=$("#id_DeptID").val()
+        var html='<select name="DeptID" id="id_DeptID"><option value="">---------</option>'+
+        {% for row in DeptID_list %}'<option value="{{ row.DeptID }}" '+({{ row.DeptID }}==pid?'selected="selected"':'') +({{ row.company_id }}==options?'':'hidden="hidden"')+'>{{ row }}</option>'+
+        {% endfor %}'</select>';
+        $("#id_DeptID").parent().html(html)
+        $("#id_DeptID option:hidden").each(function(){
+            $(this).remove();
+        });
+    });
+
+});
+{% endblock %}
+
+
+{% block spechar %}
+<script>
+function SpcharFunction(){
+        var pin = document.getElementById("id_PIN").value;
+        var ename = document.getElementById("id_EName").value;
+        var nat = document.getElementById("id_National").value;
+        var title = document.getElementById("id_Title").value;
+        var patt1 = new RegExp("['\"!~@#\$\?%\^\\\\/=<>:`\(\)\{\}\*\|\+\\[\\]\&]");
+        if (patt1.test(pin)){
+            alert("PIN contains illegal characters.");
+            return false;
+        }
+        if (patt1.test(ename)){
+            alert("Ename contains illegal characters.");
+            return false;
+        }
+        if (patt1.test(nat)){
+            alert("National contains illegal characters.");
+            return false;
+        }
+        if (patt1.test(title)){
+            alert("Title contains illegal characters.");
+            return false;
+        }
+    }
+
+        
+</script>
+
+{% endblock %}
+
+
+
+
+{% block add_contents %}
+<div style="position:absolute; right:4px; top:100px;">&nbsp;&nbsp;&nbsp;
+{%if instance.getImgUrl %}
+<img src="{{ instance.getImgUrl}}" />
+{%endif%}
+</div>
+
+{% endblock %}

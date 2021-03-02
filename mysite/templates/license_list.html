@@ -1,0 +1,12 @@
+{% extends "data_list.html" %}
+{% block tblHeader %}
+options.canAdd=false;
+options.canDelete=false;
+
+fieldHeaders=["{{ cl.FieldName.id }}","{{ cl.FieldName.UPK }}","{{ cl.FieldName.dl }}","{{ cl.FieldName.el }}","{{ cl.FieldName.time }}","{{ cl.FieldName.license }}"
+];
+{% endblock %}
+{% block rowdata %}
+{% for item in latest_item_list %}
+["{{ item.id }}","{{ item.UPK }}","{{ item.dl }}","{{ item.el }}","{{ item.time }}","{{ item.license }}"]{%if not forloop.last%},{%endif%}{% endfor %}
+{% endblock %}

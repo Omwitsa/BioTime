@@ -1,0 +1,15 @@
+{% extends "data_list.html" %}
+{% load i18n %}
+{% block tblHeader %}
+options.disableCols=["0"]
+options.canEdit=false;
+options.canAdd=false;
+
+fieldHeaders=["{{ cl.FieldName.time }}","{{ cl.FieldName.filename }}","{{ cl.FieldName.savePath }}","{{ cl.FieldName.CmdReturn }}"
+];
+
+{% endblock %}
+{% block rowdata %}
+{% for item in latest_item_list %}
+["{{ item.id }}","{{ item.time }}","{{ item.filename }}","{{ item.savePath }}","{{ item.get_CmdReturn_display }}"]{%if not forloop.last%},{%endif%}{% endfor %}
+{% endblock %}

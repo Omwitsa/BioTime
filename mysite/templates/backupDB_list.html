@@ -1,0 +1,12 @@
+{% extends "data_list.html" %}
+{% block tblHeader %}
+options.canDelete=false;
+options.canAdd=false;
+
+fieldHeaders=["{{ cl.FieldName.isAuto }}","{{ cl.FieldName.T_month }}","{{ cl.FieldName.CmdReturn }}","{{ cl.FieldName.LastTime }}"
+];
+{% endblock %}
+{% block rowdata %}
+{% for item in latest_item_list %}
+["{{ item.isAuto }}","{{ item.T_month }}","{{ item.CmdReturn }}","{{ item.LastTime }}"]{%if not forloop.last%},{%endif%}{% endfor %}
+{% endblock %}

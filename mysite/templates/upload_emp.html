@@ -1,0 +1,82 @@
+{% extends "base_site.html" %}
+{% load iclock_tags %}
+{% load i18n %}
+{% block title %}{% trans 'Upload Employee' %}{% endblock %}
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+	<a href="/">{%trans "Home"%}</a> &rsaquo;
+	{%trans "Import Employee to Zone"%}
+</div>
+<br/><br/><h1>&nbsp;&nbsp;&nbsp;{%trans "Import Employee to Zone"%}</h1>
+{% endblock %}
+
+{% block extrahead %}
+<link href="/iclock/media/css/changelists.css" type="text/css" rel="stylesheet">
+<style>
+</style>
+<script src="/iclock/media/jslib/pg.js"></script>
+<script>
+function setSN() {
+	$("#txtSN").val($("#md_slt").val());
+}
+$(function(){
+	$("#aGetSN").click(function(){
+		createDialog(setSN, setSN, "/iclock/data/iclock/miniData?key=company", "{%trans "Zone choice"%}", "{%trans 'Zone'%}", 350);
+	});
+});
+
+function checkform() {
+	if (document.getElementById("txtSN").value == "") {
+		alert("{%trans "zone choice"%}");
+		return false;
+	}
+	if (document.getElementById("fileUser").value == ""
+		&& document.getElementById("fileTransaction").value == ""
+		&& document.getElementById("fileFptemp").value == "") {
+			alert(_("You upload a filex no choice"));
+			return false;
+	}
+	if (document.getElementById("fileUser").value == "" && document.getElementById("fileFptemp").value != "") {
+		alert("{%trans 'If you plan to upload fingerprint template, users upload information at the same time'%}");
+		return false;
+	}
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<br />
+<form id="form1" action="" method="POST" enctype="multipart/form-data">
+<table width="950px" class="import">
+	<tr>
+		<th width="220px">{%trans "Zone"%}</th><th width="100px">{%trans "File type"%}</th><th width="150px">{% trans "Download" %}<br/>{% trans "ImportEmp Template" %}</th><th>{%trans "Select file"%}</th>
+	</tr>
+	<tr class="row1">
+		<td rowspan="4">
+            <br/>
+			<input type="text" name="SN" id="txtSN" value="" readonly /> <br/>
+			&nbsp;&nbsp;<a href="#" id="aGetSN">[{%trans "select zone"%}]</a><br/>
+			&nbsp;&nbsp;
+      {%trans 'Here set which zone to upload'%}
+		</td>
+	</tr>
+	<tr>
+	</tr>
+	<tr class="row1">
+		<td rowspan="4">{%trans "Employee File"%}</td>
+        <td rowspan="4">
+            <br/><a href="javascript: window.location.href='?download=1';" id="downloadTemplate">[{%trans "download template"%}]</a>
+            <br/><br/>{%trans "Please download this template and edit it."%}
+        </td>
+		<td>
+			<input type="file" name="file_user" id="fileUser" value="Roy"/>&nbsp;&nbsp;employee.txt
+			<br />{%trans "If upload employee data must determine the file format is correct"%}
+            &nbsp;<input type="submit" name="submit" value="{%trans "upload file"%}" onclick="return checkform();"/>
+		</td>
+	</tr>
+	<tr>
+	</tr>
+</table>
+</form>
+{% endblock %}
+

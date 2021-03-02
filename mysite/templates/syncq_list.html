@@ -1,0 +1,9 @@
+{% extends "data_list.html" %}
+{% block tblHeader %}
+fieldHeaders=["{{ cl.FieldName.obj }}","{{ cl.FieldName.op }}","{{ cl.FieldName.cnt }}","{{ cl.FieldName.time }}","{{ cl.FieldName.upk }}"
+];
+{% endblock %}
+{% block rowdata %}
+{% for item in latest_item_list %}
+["{{ item.obj }}","{{ item.get_op_display }}","{{ item.cnt }}","{{ item.time }}","{{ item.upk }}"]{%if not forloop.last%},{%endif%}{% endfor %}
+{% endblock %}

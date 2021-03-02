@@ -1,0 +1,173 @@
+{% extends "data_edit.html" %}
+{% load i18n %}
+{% block addjs %}
+
+
+function setBackDev()
+{
+	var v=$("#md_slt").val();
+	if(v!=$("#id_SN").val())
+		$("#id_BackupDev").val(v);
+	else
+		alert("{%trans "don't set backup"%}");
+}
+function dep_func(){
+    var select_dep=$("#id_DeptID").find("option:selected").text();
+    if (select_dep == "---------"){ //当dep为空的时候，submit按钮是没有作用的，只有选择zone和dep才有效
+        $("#id_sbm").attr("disabled",true);
+    }
+    else{
+        $("#id_sbm").removeAttr("disabled");
+    }
+}
+$(function(){
+
+	var pid=$("#id_company").val();
+    var clear_select=$("#id_company").find("option:selected").text();
+	var html='<select name="company" id="id_company"><option value="">---------</option>'+
+	{% for row in Company_list %}'<option value="{{ row.companyid }}" '+({{ row.companyid }}==pid?'selected':'')+'>{{ row }}</option>'+
+	{% endfor %}'</select>';
+	$("#id_company").parent().html(html)
+
+    var begin_value = $("#id_company").find("option:selected").text();
+    var dep_value=$("#id_DeptID").find("option:selected").text();
+    console.log("loading",dep_value);
+    if (dep_value == "---------"){ //当dep为空的时候，submit按钮是没有作用的，只有选择zone和dep才有效
+        $("#id_sbm").attr("disabled",true);
+    }
+    else{
+        $("#id_sbm").removeAttr("disabled");
+    }
+    $("#id_IsClear").attr("disabled","disabled");
+
+    $("#id_company").change(function(){
+        var ass = $("#id_IsClear").attr("checked",false);
+        var select_zone=$("#id_company").find("option:selected").text();
+        var select_dep=$("#id_DeptID").find("option:selected").text();
+        if ((select_zone != begin_value)&&(select_zone != "---------")){//判断所选的zone跟之前zone是否一样，一样就不可勾选，反之则可以勾选
+            $("#id_IsClear").removeAttr("disabled");//而且如果所选zone是"---------"是没有意义的，也应该要不可勾选
+            //$("#id_sbm").attr("disabled",true);
+        }else{
+            $("#id_IsClear").attr("disabled","disabled");
+            //$("#id_sbm").removeAttr("disabled");
+        }
+        //if (select_zone == "---------"){
+            //$("#id_sbm").attr("disabled",true);
+        //}
+
+        $("#id_sbm").attr("disabled",true);//只要zone框被改变，不管zone有没有改变，都让submit按钮不可用.
+
+        $('#id_DeptID option:selected').removeAttr('selected')
+        options = $('#id_company option:selected').val()
+        var pid=$("#id_DeptID").val()
+        var html='<select name="DeptID" id="id_DeptID" onchange="dep_func()"><option value="">---------</option>'+
+        {% for row in DeptID_list %}'<option value="{{ row.DeptID }}" '+({{ row.DeptID }}==pid?'selected="selected"':'') +({{ row.company_id }}==options?'':'hidden="hidden"')+'>{{ row }}</option>'+
+        {% endfor %}'</select>';
+        $("#id_DeptID").parent().html(html)
+        $("#id_DeptID option:hidden").each(function(){
+            $(this).remove();
+        console.log("four",select_dep);
+        });
+    });
+    $("#id_company").each(function(){
+        options = $('#id_company option:selected').val()
+        var pid=$("#id_DeptID").val()
+        var html='<select name="DeptID" id="id_DeptID" onchange="dep_func()"><option value="">---------</option>'+
+        {% for row in DeptID_list %}'<option value="{{ row.DeptID }}" '+({{ row.DeptID }}==pid?'selected="selected"':'') +({{ row.company_id }}==options?'':'hidden="hidden"')+'>{{ row }}</option>'+
+        {% endfor %}'</select>';
+        $("#id_DeptID").parent().html(html)
+        $("#id_DeptID option:hidden").each(function(){
+            $(this).remove();
+        });
+    });
+
+    var IsSupportWC = $("#id_IsSupportWC").find("option:selected").text();
+    if(IsSupportWC=='NO'){
+        $("#id_AutoSyncWC").hide()
+    }
+    if(IsSupportWC=='YES'){
+        $("#id_AutoSyncWC").show()
+    }
+
+    $("#id_IsSupportWC").bind("change",function(){
+        var IsSupportWC = $("#id_IsSupportWC").find("option:selected").text();
+        var $input = $("input[type=submit]").eq(0)
+        if(IsSupportWC=='NO'){
+            $("#id_AutoSyncWC").hide()
+        }
+        if(IsSupportWC=='YES'){
+            $("#id_AutoSyncWC").show()
+        }
+    });
+
+$('#id_edit_form').validate({
+	rules: {
+		"Alias": {"maxLength":20},
+		"TransInterval":{"digits":true,"maxLength":8},
+		"LogStamp":{"digits":true},
+		"OpLogStamp":{"digits":true}
+	}});
+var o=$('#id_LastActivity')
+$("#id_BackupDev").after('<a id="id_sltBDev" href="#">[{%trans "Set"%}]</a>&nbsp;&nbsp; <a id="id_sltBDevClear" href="#">[{%trans "Clear"%}]</a>')
+if(o.length>0) o[0].readOnly=true;
+var o=$("#id_Info");
+if(o.length>0) $(o[0].parentNode.parentNode).css("display","none")
+
+$("#id_sltBDev").click(function(){
+	createDialog(setBackDev, setBackDev, "../miniData?key=SN", "{%trans "Auto backup data"%}", "{%trans "device"%}", 350);
+});
+
+$("#id_sltBDevClear").click(function(){
+	$("#id_BackupDev").val("");
+	return false;
+});
+
+
+});
+
+{% endblock %}
+
+{% block content %}
+<form method="post" id="id_edit_form" enctype="multipart/form-data" onsubmit="return SFunction()">
+<table>
+{{ form.as_table }}
+<tr id="addition_fields">{% block addfields %}{% endblock %}
+<tr><th><label for="id_IsClear">Clear Data in the Device<br/>when Adding</label></th><td><input name="IsClear" id="id_IsClear" type="checkbox" value="1"/>
+</tr>
+<tr ><th>&nbsp;&nbsp;</th>
+<td style='padding-top: 20px;'><input type="submit" value="{%trans "Submit"%}" id="id_sbm"> &nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="submit" value="{%trans "Return"%}" onclick="window.history.back(); return false;"></td>
+</tr>
+</table>
+</form>
+
+<script>
+function SFunction(){
+        var alias = document.getElementById("id_Alias").value;
+        var sn = document.getElementById("id_SN").value;
+        console.log(sn);
+        console.log(alias);
+        var patt1 = new RegExp("^[0-9a-zA-Z]{0,20}$");
+        var patt2 = new RegExp("['\"!~@#\$\?%\^\\\\/=<>:`\(\)\{\}\*\|\+\\[\\]\&]");
+        var result1 = patt1.test(sn);
+        var result2 = patt2.test(alias);
+        console.log(result1);
+        console.log(result2);
+        if (!(patt1.test(sn))){
+            alert("Device SN contains illegal characters.");
+            return false;
+        }
+        if (patt2.test(alias)){
+            alert("Device Alias name contains illegal characters.");
+            return false;
+        }
+}
+</script>
+
+{% block add_contents %}{% endblock %}
+
+{% endblock %}
+
+
+
+

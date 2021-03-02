@@ -1,0 +1,24 @@
+{% extends "data_list.html" %}
+{% load i18n %}
+{% load iclock_tags %}
+{% block tblHeader %}
+options.canAdd=false;
+fieldHeaders=["{{ cl.FieldName.upk }}","{{ cl.FieldName.alias }}","{{ cl.FieldName.company }}"
+];
+
+extraBatchOp=[
+{action:{% if user|HasPerm:"iclock.send_client_department" %}'?action=send_client_department'{% else %}''{% endif %}, title: '{%trans "Sync Department Info to Client"%}'},
+{action:{% if user|HasPerm:"iclock.send_client_device" %}'?action=send_client_device'{% else %}''{% endif %}, title: "{%trans "Sync Device Info to Client"%}"},
+{action:{% if user|HasPerm:"iclock.send_client_employees" %}'?action=send_client_employees'{% else %}''{% endif %}, title: "{%trans "Sync Employees to Client"%}"},
+{action:{% if user|HasPerm:"iclock.send_client_punches" %}'?action=send_client_punches'{% else %}''{% endif %}, title: "{%trans "Sync Punches to Client"%}"},
+{action:{% if user|HasPerm:"iclock.send_client_all" %}'?action=send_client_all'{% else %}''{% endif %}, title: "{%trans "Sync All in Zone to Client"%}"},
+];
+{% endblock %}
+
+{% block rowdata %}
+{% for item in latest_item_list %}
+["{{ item.upk }}","{{ item.alias }}","{{ item.company }}"]{%if not forloop.last%},{%endif%}{% endfor %}
+{% endblock %}
+
+
+

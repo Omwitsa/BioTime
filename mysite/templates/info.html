@@ -1,0 +1,28 @@
+{% extends "base_site.html" %}
+{% block extrastyle %}
+{% load i18n %}
+<script type="text/javascript">
+$(function(){
+	var url = "/iclock/data/download/upk/" + {{ fisrtid }} +'/';
+	$("#id_UPK_url").attr("href",url);
+})
+</script>
+<style>
+code, pre{
+padding-left:30px;
+}
+</style>
+{% endblock %}
+{% block content %}
+<p>&nbsp;</p>
+{% autoescape off %}
+<div style="color: #FF0000;">{{ content }}</div>
+{% endautoescape %} 
+<br />
+<p>&nbsp;</p>
+{% if downloadbut %}
+<a id='id_UPK_url' href="" style='padding-top: 20px;'>Download UPK</a>
+&nbsp;&nbsp;
+{% endif %}
+<input type="submit" value="{% trans 'Return' %}" onclick="window.history.back(); return false;">
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends "data_edit.html" %}
+{% load i18n %}
+
+{% block addjs %}
+
+function toggleShowPwd(show)
+{
+	if(show)
+	{
+		$('#id_ResetPassword').parent().parent().show();
+		$('#id_Password').parent().parent().show();
+		$('#id_ResetPassword').val('');
+		$('#id_Password').val('');
+	}
+	else
+	{
+		$('#id_ResetPassword').parent().parent().hide();
+		$('#id_Password').parent().parent().hide();
+		$('#id_ResetPassword').val('111111');
+		$('#id_Password').val('111111');
+	}
+}
+
+function toggleShowSuper(show)
+{
+	var dept=$('#id_AuthedDept')
+	if(show)
+	{
+		$('#id_groups').parent().parent().show();
+		dept.parent().parent().show();
+	}
+	else
+	{
+		$('#id_groups').parent().parent().hide();
+		dept.parent().parent().hide();
+		if(dept[0].selectedIndex<=0)
+		{dept[0].selectedIndex=1;}
+	}
+}
+
+$(function(){
+	$('#id_is_superuser').parent().parent().hide();
+	
+	{% if Groups_list%}
+	var pid=$("#id_groups").val()
+	var html='<select multiple="multiple" name="groups" id="id_groups">'+
+	{% for row in Groups_list %}'<option value="{{ row.id }}" '+({{ row.id }}==pid?'selected':'')+'>{{ row }}</option>'+
+	{% endfor %}'</select>';
+	{% endif %}
+	$("#id_groups").parent().html(html)
+	
+	{% if AuthedDept_list%}
+	var pid=$("#id_AuthedDept").val()
+	var html='<select name="AuthedDept" id="id_AuthedDept"><option value="">---------</option>'+
+	{% for row in AuthedDept_list %}'<option value="{{ row.DeptID }}" '+({{ row.DeptID }}==pid?'selected':'')+'>{{ row }}</option>'+
+	{% endfor %}'</select>';
+	{% endif %}
+	$("#id_AuthedDept").parent().html(html)
+	
+	{% if Company_list%}
+	var pid=$("#id_company").val()
+	var html='<select name="company" id="id_company"><option value="">---------</option>'+
+	{% for row in Company_list %}'<option value="{{ row.companyid }}" '+({{ row.companyid }}==pid?'selected':'')+'>{{ row }}</option>'+
+	{% endfor %}'</select>';
+	{% endif %}
+	$("#id_company").parent().html(html)
+	
+	{% if Priv_list%}
+	var pid=$("#id_priv").val()
+	var html='<select name="priv" id="id_priv"><option value="">---------</option>'+
+	{% for row in Priv_list %}'<option value="{{ row.Privilege }}" '+({{ row.Privilege }}==pid?'selected':'')+'>{{ row }}</option>'+
+	{% endfor %}'</select>';
+	{% endif %}
+	$("#id_priv").parent().html(html)
+
+
+
+	$('#id_is_resetPw').click(function()
+	{
+		toggleShowPwd(this.checked);
+	})
+	$('#id_is_superuser').click(function()
+	{
+		toggleShowSuper(!this.checked);
+	})
+{% if isAdd %}
+	$('#id_is_resetPw').parent().parent().hide();
+{% else %}
+	$.each($('#id_is_resetPw'),function(){
+		if($(this).attr("checked"))
+			toggleShowPwd(this.checked);
+		else
+			toggleShowPwd(false);
+	});
+	$('#id_username').attr('readonly','True')
+{% endif %}
+	if($('#id_is_superuser').attr("checked"))
+		toggleShowSuper(false)
+})
+
+{% endblock %}

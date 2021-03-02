@@ -1,0 +1,29 @@
+{% extends "data_list.html" %}
+{% load iclock_tags %}
+{% load i18n %}
+{% block tblHeader %}
+//options.disableCols=[0,6,7];
+options.canAdd=false;
+options.canEdit=false;
+fieldHeaders=["{{ cl.FieldName.id }}","{{ cl.FieldName.SN }}","{{ cl.FieldName.work_code }}", "{{ cl.FieldName.work_name }}"];
+
+//function strOfData(data)
+//{
+//	return "{%trans "at"%} "+data[3]+" {%trans "to device "%} "+(data[1].split("(")[0])+"{%trans "send command"%} "+data[2].split("<")[0];
+//}
+
+//function getRet(data)
+//{
+//	if(data[7]=="") return removeNone(data[6]);
+//	return "<a href='"+data[7]+"'>"+removeNone(data[6])+"</a>"; 
+//}
+
+{% endblock %}
+
+{% block rowdata %}
+{% for item in latest_item_list %}["{{item.id}}","{{ item.Device }}", "{{ item.work_code }}","{{ item.work_name }}"]{%if not forloop.last%},{%endif%}
+{% endfor %}
+{% endblock %}
+
+
+

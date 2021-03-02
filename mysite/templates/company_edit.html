@@ -1,0 +1,25 @@
+{% extends "data_edit.html" %}
+
+{% block addjs %}
+$(function(){
+	{% if not add %}
+	$('#id_companyid').attr('readonly', true);
+    {% endif %}
+
+});
+{% endblock %}
+
+
+{% block spechar %}
+<script>
+function SpcharFunction(){
+        var companyname = document.getElementById("id_companyname").value;
+        var patt1 = new RegExp("['\"!~@#\$\?%\^\\\\/=<>:`\(\)\{\}\*\|\+\\[\\]\&]");
+        if (patt1.test(companyname)){
+            alert("Zone Name contains illegal characters.");
+            return false;
+        }
+}
+</script>
+
+{% endblock %}

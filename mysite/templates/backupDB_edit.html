@@ -1,0 +1,72 @@
+{% extends "data_edit2.html" %}
+{% load i18n %}
+{% block addjs %}
+{#function check_hour(value){#}
+{#    value=value.replace(/\D/g,'')#}
+{#    if (value<0 || value>23){#}
+{#        $("#hour").val("")#}
+{#    }#}
+{#    else{$("#hour").val(value)}#}
+{##}
+{#}#}
+{#function check_min(value){#}
+{#    value=value.replace(/\D/g,'')#}
+{#    if (value<0 || value>59){#}
+{#        $("#min").val("")#}
+{#    }#}
+{#    else{$("#min").val(value)}#}
+{##}
+{#}#}
+
+$(function(){
+    {% if not add %}
+	    $('#id_id').attr('readonly', true);
+    {% endif %}
+    var txtN = $("#id_SavePath");
+    txtN[0].readOnly=true;
+
+    var isAuto = $("#id_isAuto").find("option:selected").text();
+    $("#id_T_month").before("On")
+    $("#id_T_month").after("Day")
+    $("#id_T_month").css("width","50px")
+{#    $("#id_T_month").after('Day&nbsp;&nbsp;At<input type="text" id="hour" name="hour" style="width:15px" onkeyup="check_hour(this.value)">H(0~23)<input type="text" style="width:15px" id="min" name="min" onkeyup="check_min(this.value)">M(0~59)')#}
+    $("#id_T_hour").before("At")
+    $("#id_T_hour").after("H")
+    $("#id_T_hour").css("width","50px")
+    $("#id_T_min").before("At")
+    $("#id_T_min").after("M")
+    $("#id_T_min").css("width","50px")
+    if(isAuto=='NO'){
+        $("#id_T_month").parent().parent().hide()
+        $("#id_T_hour").parent().parent().hide()
+        $("#id_T_min").parent().parent().hide()
+        $("input[type=submit]").val("Backup now");
+    }
+    if(isAuto=='YES'){
+        $("#id_T_month").parent().parent().show()
+        $("#id_T_hour").parent().parent().show()
+        $("#id_T_min").parent().parent().show()
+        $("input[type=submit]").val("Submit");
+    }
+{#    $("input[type=submit]").after('&nbsp;&nbsp;<input type="submit" value="{% trans 'return' %}" onclick="window.history.back(); return false;">')#}
+
+    $("#id_isAuto").bind("change",function(){
+        var isAuto = $("#id_isAuto").find("option:selected").text();
+        var $input = $("input[type=submit]").eq(0)
+        if(isAuto=='NO'){
+            $("#id_T_month").parent().parent().hide()
+            $("#id_T_hour").parent().parent().hide()
+            $("#id_T_min").parent().parent().hide()
+            $input.val("Backup now");
+        }
+        if(isAuto=='YES'){
+            var time = $("#id_T_month").val()
+            $("#id_T_month").parent().parent().show()
+            $("#id_T_hour").parent().parent().show()
+            $("#id_T_min").parent().parent().show()
+            $input.val("Submit");
+        }
+    });
+});
+
+{% endblock %}

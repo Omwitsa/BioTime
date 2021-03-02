@@ -1,0 +1,168 @@
+
+.nav, .nav ul {
+padding: 0;
+margin: 0;
+list-style: none;
+line-height: 1;
+width:100%;
+vertical-align:middle;
+z-index: 1000;
+
+}
+.nav a {
+border:1px solid transparent;
+_border:1px solid #ddd;
+display: block;
+margin: 0 0 10px;
+padding-left: 20px;
+padding-right: 20px;
+text-decoration: none;
+color: #000000;
+}
+.nav li a:hover {
+text-decoration: none;
+
+    color: #ffffff;
+
+/*_background:  url('../img/headerbg6.png') repeat scroll center center;*/
+/*_color: #fff;*/
+
+}
+
+.mainMenu {
+    font-size: 12pt;    
+    font-weight:bold;
+}
+
+.nav li {
+margin:0px;
+float: left;
+list-style: none;
+width: auto;
+font-size: 10pt;
+line-height: 19px;
+vertical-align:middle;
+}
+.nav li ul a {
+    padding: 2px 8px;
+    margin: 0;
+    color: #444 !important;
+}
+.nav li ul li {
+width: 100%;
+background: #fafafa;
+vertical-align:middle;
+}
+.nav li ul {
+position: absolute;
+background-color: #fafafa;
+border-color: #ddd;
+color: #444;
+width: 240px;
+border-width: 1px;
+border-style: solid;
+padding: 1px 1px;
+left: -999em;
+vertical-align:middle;
+    padding-top: 1px;
+}
+
+.nav li:hover ul, .nav li.sfhover ul {
+left: auto;
+display: block;
+    z-index: 1100;
+}
+
+li.sfHover {
+    /*text-align: center;*/
+    vertical-align: middle;
+}
+
+
+.nav li.sfHover ul {
+left: auto;
+}
+
+#content_nav {
+clear: left;
+color: #ccc;
+}
+
+
+#nav li.sfHover ul {
+    width: 1000px;
+    left: 30px;
+    position: fixed;
+    border-width: 0px;
+}
+
+#nav li ul li {
+    width: 155px;
+    float: left;
+    
+}
+
+#nav li a {
+    height: 30px;
+    vertical-align: middle;
+    line-height: 2;
+}
+
+#nav li.sfHover a {
+    color: #FFFFFF;
+}
+
+/* sfFocus Styles */
+
+.sfFocus {
+background: blue;
+color: #fff;
+}
+
+/* sfActive Styles */
+
+.sfActive {
+background: lime;
+color: #fff;
+}
+
+/* sfTarget Styles */
+
+.sfTarget {
+background: black;
+color: #fff;
+}
+
+ul.nav li.sfHover ul li.sfHover {
+    border-color: #b7d2ff;
+    color: #FFFFFF;
+    background: #eaf2ff;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+li ul li.sfHover {
+    border-color: #b7d2ff;
+    color: #000000;
+    background: #eaf2ff;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+ul.nav li ul {
+    z-index: 1000;
+}
+
+
+.secondMenu{
+padding-top:10px;
+
+}

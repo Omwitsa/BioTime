@@ -1,0 +1,6 @@
+SET INSTALL_PATH=D:\prj\django windows Ö§³Ö
+SET PRJ_NAME=mysite
+path = %INSTALL_PATH%\Python25;%INSTALL_PATH%\Utilities\;%INSTALL_PATH%\mssql;%PATH%
+set PYTHONPATH=%CD%;%INSTALL_PATH%\mssql;%INSTALL_PATH%\mssql\win32;%INSTALL_PATH%\mssql\win32\lib;%INSTALL_PATH%\Python25;%INSTALL_PATH%\Python25\Lib\site-packages;%INSTALL_PATH%
+SET DJANGO_SETTINGS_MODULE=%PRJ_NAME%.settings
+ECHO %INSTALL_PATH%

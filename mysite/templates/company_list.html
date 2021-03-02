@@ -1,0 +1,10 @@
+{% extends "data_list.html" %}
+{% block tblHeader %}
+fieldHeaders=["{{ cl.FieldName.companyid }}","{{ cl.FieldName.companyname }}"
+];
+{% endblock %}
+
+{% block rowdata %}
+{% for item in latest_item_list %}
+["{{ item.companyid }}","{{ item.companyname }}"]{%if not forloop.last%},{%endif%}{% endfor %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% load i18n %}
+<li ><a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-search" plain="true">{% blocktrans with title|escape as filter_title %} {{ filter_title }}  {% endblocktrans %}</a>
+<ul>
+{% for choice in choices %}
+    <li{% if choice.selected %} class="selected"{% endif %}>
+    <a href="{{ choice.query_string }}">{{ choice.display|escape }}</a></li>
+{% endfor %}
+</ul>
+</li>
+

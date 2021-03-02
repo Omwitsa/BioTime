@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load iclock_tags %}
+
+{% block branding %}
+<img style="float: left; height: 35px;padding-left: 30px;" src="/iclock/media/img/zklogo2.png"/>
+<h1 id="site-name" style="float: left;">WDMS</h1>
+{% if user.is_authenticated and user.is_staff %}
+<span  style="float: left; position: absolute;margin-left: 42px;">
+    <ul id="nav"  class="nav" style="float: left; left: 0px;z-index: 800;">
+        {% autoescape off %}
+
+        <li>
+            <a class="mainMenu" href="javascript:void(0);">Device</a>
+            <ul>
+            {% if user|HasPerm:"iclock.browse_iclock" %}
+                <li><a href="/iclock/data/iclock/">Device Management</a> </li>
+            {% endif %}
+            {% if user|HasPerm:"iclock.browse_oplog" %}
+                <li><a href="/iclock/data/_checkoplog_">Transaction Monitor</a></li>
+            {% endif %}
+            {% if user|HasPerm:"iclock.browse_workcode" %}
+                <li><a href="/iclock/data/workcode/">Workcode</a></li>
+            {% endif %}
+            </ul>
+        </li>
+        <li>
+            <a class="mainMenu" href="javascript:void(0);">Data</a>
+            <ul style="width:100%">
+            {%if request.company%}
+                <li><a href="/iclock/data/company/">Zone</a></li>
+            {%endif%}
+            {% if user|HasPerm:"iclock.browse_department" %}
+                <li><a href="/iclock/data/department/">Department</a></li>
+            {% endif %}
+            {% if user|HasPerm:"iclock.browse_employee" %}
+                <li><a href="/iclock/data/employee/">Employee</a></li>
+            {% endif %}
+            {% if user|HasPerm:"iclock.browse_transaction" %}
+                <li><a href="/iclock/data/transaction/">Transaction</a></li>
+            {% endif %}
+            <!-- (3760)Import Employee Page    by Louis 2014-06-05-->
+             {% if user|HasPerm:"iclock.browse_client" %}
+                <li><a href="/iclock/data/client/">Client</a></li>
+            {% endif %}
+            {%if request.company%}
+                <li><a href="/iclock/data/backupDB/1/">DB</a></li>
+            {% endif %}
+			{% if user|HasPerm:"iclock.browse_importEmp" %}
+                <li><a href="/iclock/data/importEmp">Import Employee</a></li>
+            {% endif %}
+            </ul>
+        </li>
+        <li>
+            <a class="mainMenu" href="javascript:void(0);">Log</a>
+            <ul>
+            {% if user|HasPerm:"iclock.browse_oplog" %}
+                <li><a href="/iclock/data/oplog/">Device Operation</a></li>
+            {% endif %}
+            {% if user|HasPerm:"iclock.browse_devlog" %}
+
+                <li><a href="/iclock/data/devlog/">Device Data</a></li>
+            {% endif %}
+            {% if user|HasPerm:"iclock.browse_devcmds"%}
+                <!--<li><a href="/iclock/data/devcmds/">Device Command</a></li>-->
+            {% endif %}
+            {% if user|HasPerm:"iclock.browse_adminlog"%}
+                <li><a href="/iclock/data/adminLog/">Admin Operation</a></li>
+            {% endif %}
+            {% if user|HasPerm:"iclock.browse_backupdblog"%}
+                <li><a href="/iclock/data/backupDBLog/">Backup DB</a></li>
+            {% endif %}
+            {% if user|HasPerm:"iclock.browse_devworkcode" %}
+                <li><a href="/iclock/data/devworkcode/">WorkCode to device</a></li>
+            {% endif %}
+            </ul>
+        </li>
+        <li>
+            <a class="mainMenu" href="javascript:void(0);">System</a>
+            <ul>
+            {% if user|HasPerm:"auth.browse_group" %}
+                <li><a href="/iclock/data/Group/">Group Management</a></li>
+            {% endif %}
+            {% if user|HasPerm:"auth.browse_user" %}
+                <li><a href="/iclock/data/User/">Admin Management</a></li>
+            {% endif %}
+            {%if request.company%}
+            <li><a href="/iclock/data/license/1/">License</a></li>
+            {%endif%}
+            </ul> 
+        </li>
+        {% endautoescape %}
+    </ul>
+</span>
+
+
+<script>
+    $(function() {
+        $('.nav li').sfHover();
+    });
+    
+
+    //2013-10-14
+
+    $(function() {
+
+        //$('#divPage').addClass('datagrid-toolbar');
+        //$('#tbl').addClass('datagrid-btable').removeClass('autoht');
+        $('.hDivBox').addClass('datagrid-header-row');
+        //$('#id_newrec').linkbutton({
+        //    plain: true
+        //});
+        //alert($('.hDivBox table').text());
+    });
+    
+    //2013-10-14
+
+</script>
+{% endif %}
+{% endblock %}
+
+{% block nav-global %}
+{% endblock %}

@@ -1,0 +1,490 @@
+{% extends "base_site.html" %}
+{% load iclock_tags %}
+{% load i18n %}
+{% block content_title %}{% endblock %}
+{% block title %}{{ dataOpt.verbose_name|cap }}{% endblock %}
+{% block extrahead %}
+<script src="/iclock/media/jslib/core.js"></script>
+<script src="/iclock/media/jslib/calendar.js"></script>
+<script src="/iclock/media/jslib/DateTimeShortcuts.js"></script>
+<script src="/iclock/media/jslib/flexigrid.js"></script>
+<link rel="stylesheet" type="text/css" href="/iclock/media/css/flexigrid.css" />
+<link href="/iclock/media/css/changelists.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/iclock/media/css/forms.css" />
+<link rel="stylesheet" type="text/css" href="/iclock/media/css/iclockbox.css" />
+<script>
+    orderBy="{{ order_by }}";
+    options={pagerId:"pages", tblId:"tbl", showSelect: true, canSelectRow:false,showStyle:false,
+        canEdit: {% if request|reqHasPerm:"change" %}true{% else %}false{% endif %},
+            canAdd: {% if request|reqHasPerm:"add" %}true{% else %}false{% endif %},
+            canDelete: {% if request|reqHasPerm:"delete" %}true{% else %}false{% endif %},
+            canSearch: true, keyFieldIndex:"0", title:'{{ dataOpt.verbose_name|cap }}',
+            tblHeader:'{%trans "Please set a template file"%}options.tblHeader'};
+            totalRecCnt={{ item_count }};
+            item_from={{ from }}
+            page_index={{ page }};
+            page_limit={{ limit }};
+            page_number={{ page_count }};
+            dataExportsFormats={ {% for f in cl.getDataExportsFormats %}"{{ f.0 }}":"{{ f.1 }}", {% endfor %} "":""};
+            delete dataExportsFormats[""];
+            {% autoescape off %}{% block tblHeader %}{% endblock %}{% endautoescape %}
+
+            if(typeof fieldHeaders=="object") //["{{ cl.FieldName.SN }}"];
+            options.tblHeader=fieldHeaders.join(" ")
+            {% autoescape off %}
+            data=[{% block rowdata %}
+            "ROW DATA",
+            {% endblock %}];
+            {% endautoescape %}
+            function delAllRec()
+            {
+            if(confirm(window.delAllHint?delAllHint():"{%trans 'Clear all data, are you sure?'%}"))
+            window.location.href="_clear_/"
+        }
+
+            function delOldRec(days)
+            {
+            var ret=false;
+            if(days==undefined || days==-1)
+            ret=confirm("{%trans 'Delete out-of-date records, are you sure?'%}");
+            else
+            ret=confirm("{%trans 'Purge data which is older than _days_ days?'%}".replace("_days_",days));
+            if(ret) window.location.href="_del_old_/";
+        }
+
+            function setDataFilter(url, value)
+            {
+            if( typeof(value)=="object")
+            {
+            var maxUrlLength=$.browser.msie?2000:(20*1024);
+            while((value.join(",").length>maxUrlLength))
+            value.pop(0);
+        }
+            url=getQueryStr(window.location.href, [url], url+'='+value);
+            window.location.href=url;
+        }
+
+            function showFilterChoices(s, name)
+            {
+            var data=s.split("__")[0]
+            if(data=="UserID")
+            createDlgToUser(s,setDataFilter);
+            else if(data=="DeptID")
+            createDlgToDepartment(s,setDataFilter);
+            else{
+            createDialog(s, setDataFilter, "miniData?key="+data, String.format(gettext("Filter by {0}"),name), name, 350, true);
+        }
+        }
+            function createDlgToUser(url)
+            {
+
+            var block_html="<div class='dialog' style='width:700px;min-height: 400px;'>"
+            +         "<div class='dheader'>{% trans 'Select Employee' %}</div>"
+            +         "<div class='dcontent'>"
+            +           "<table width=100%>"
+            +"<tr>"
+            +"<td colspan='3' style='padding: 0;'><div id='show_dept_emp_tree' style='min-height: 200px;'></div></td>"
+            +"<tr><td colspan='3'>"+createSubmitButton()+"</td></tr>"
+            +"<tr><td colspan='3'>&nbsp;</td></tr>"
+            +            "</table>"
+            +       "</div>"
+
+
+            $.blockUI(block_html);
+            getDept_to_show_emp(350);
+            blockUI_center();
+            $("#btnShowOK").click(function(){
+            emp=getSelected_emp();
+            if( typeof(emp)=="object")
+            {
+            var maxUrlLength=$.browser.msie?2000:(20*1024);
+            while((emp.join(",").length>maxUrlLength))
+            emp.pop(0);
+        }
+            if(emp=="")
+            urlStr=window.location.pathname
+            else
+            urlStr=window.location.pathname+"?"+url+"="+emp;
+            window.location.href=urlStr;
+        });
+            $("#btnShowCancel").click(function() {
+            $.unblockUI();
+        });
+        }
+            function createDlgToDepartment(url)
+            {
+
+            var block_html="<div class='dialog' style='width:450px;'>"
+            +         "<div class='dheader'>"+gettext("Select Department")+"</div>"
+            +         "<div class='dcontent' width='450px'>"
+            +           "<table width=450px>"
+            +"<tr>"
+            +"<td colspan='3'>"
+            +"<div>"
+            +"<div id='id_opt_tree'>"
+            +"<a href='javascript:void(0);' id='id_expendAll'><img src='/iclock/media/img/images/expandAll.png' />&nbsp;&nbsp;"+gettext("Expand")+"</a>&nbsp;&nbsp;"
+            +"<a href='javascript:void(0);' id='id_collapseAll'><img src='/iclock/media/img/images/collapseAll.png' />&nbsp;&nbsp;"+gettext("Collaspe")+"</a>&nbsp;&nbsp;"
+            +"<a href='javascript:void(0);' id='id_refresh'><img src='/iclock/media/img/images/refresh.png' />&nbsp;&nbsp;"+gettext("Refresh")+"</a>&nbsp;&nbsp;"
+            +"<input type='checkbox' id='id_contain_chl'/>&nbsp;&nbsp;"+gettext("Contain")
+            +"</div>"
+            +"<span>"+gettext("Department")+"</span>"
+            +"<div id='showTree' style='overflow: auto;height:300px;'></div>"
+            +"</div>"
+            +"</td></tr>"
+            +"<tr><td colspan='3'>"+createSubmitButton()+"</td></tr>"
+            +"<tr><td colspan='3'>&nbsp;</td></tr>"
+            +            "</table>"
+            +       "</div>"
+
+    
+            $.blockUI(block_html);
+            $("#showTree").html(getDeptTree(0,2));
+            $("#deptBrowser").treeview();
+            $("#id_expendAll").click(function(){
+            $("#showTree").html(getDeptTree(0,2));
+            $("#deptBrowser").treeview();
+            contain_child();
+
+        });
+            $("#id_collapseAll").click(function(){
+            $("#showTree").html(getDeptTree(1,2));
+            $("#deptBrowser").treeview();
+            contain_child();
+
+        });
+
+            $("#id_refresh").click(function(){
+            $("#showTree").html(getDeptTree(0,2));
+            $("#deptBrowser").treeview();
+            contain_child();
+        
+        });
+            contain_child();
+            blockUI_center();
+            $("#btnShowOK").click(function(){
+            dept=getSelected_dept();
+            if( typeof(dept)=="object")
+            {
+            var maxUrlLength=$.browser.msie?2000:(20*1024);
+            while((dept.join(",").length>maxUrlLength))
+            dept.pop(0);
+        }
+            if(dept=="")
+            urlStr=window.location.pathname
+            else
+            urlStr=window.location.pathname+"?"+url+"="+dept;
+            window.location.href=urlStr;
+        });
+            $("#btnShowCancel").click(function() {
+            $.unblockUI();
+        });
+    
+        }
+            function contain_child()
+            {
+            $.each($("#id_contain_chl"),function(){    
+            var ischecked=$.cookie("contain")
+            if(ischecked==1)
+            $(this).attr("checked","checked");
+            else
+            $(this).removeAttr("checked");
+        });
+            $("#id_contain_chl").click(function(){
+            var ischecked=$(this).attr("checked");
+            if(ischecked)
+            ischecked=1;
+            else
+            ischecked=0;
+            $.cookie("contain",ischecked, { expires: 7 });
+        });
+            $(".parent").click(function(){
+            child=$(this).attr("alt");
+            ischecked=$(this).attr("checked")
+            if($("#id_contain_chl").attr("checked")){
+            $.each($(".file input"),function(){
+            if($(this).attr("alt1")==child ) 
+            if(!ischecked)
+            $(this).removeAttr("checked")
+            else
+            $(this).attr("checked","checked")
+        });
+            $.each($(".folder input"),function(){
+            if($(this).attr("alt1")==child ){ 
+            if(!ischecked)
+            $(this).removeAttr("checked")
+            else
+            $(this).attr("checked","checked")
+            child=$(this).attr("alt");
+            ischecked=$(this).attr("checked")
+            $.each($(".file input"),function(){
+            if($(this).attr("alt1")==child ) 
+            if(!ischecked)
+            $(this).removeAttr("checked")
+            else
+            $(this).attr("checked","checked")
+        });
+        }
+        });
+        }
+        });
+
+
+        }
+            function index_tip_info(obj)
+            {
+            var index=$(obj).attr("index");
+            $("#id_tip").html(getMoreInfo(index));
+            var offset=$(obj).offset();
+            if($("#id_tip").css("visibility")=="hidden"){
+            $("#id_tip").css({"z-index":1024,"visibility":"visible","position":"absolute","top":(offset.top+30),"left":(offset.left+30)})
+            $("#id_tip").mouseover(function(){
+            $(this).css({"z-index":1024,"visibility":"visible","position":"absolute","top":(offset.top+30),"left":(offset.left+30)})
+        
+        }).mouseout(function(){
+            $("#id_tip").css("visibility","hidden");
+        });
+        }
+            else
+            $("#id_tip").css("visibility","hidden");
+    
+        }
+            function tip_info_exit()
+            {
+            $("#id_tip").css("visibility","hidden")
+        }
+            $(function(){
+            if(!options.canAdd)$("#id_newrec").attr('disabled','true');
+            if(!options.canDelete) $("#id_clearrec").attr('disabled','true');
+            if(!options.canSearch) $("#changelist-search").remove();
+            if(!options.showStyle) $("#id_show_style").css('display','none');
+            {% if cl.getDataExportsFormats %} $("#id_export").show(); {% endif %}
+            locations=location+"";
+            var searchStr=getKeyQuery("q");
+            if(searchStr!="")
+            {
+            $("#searchbar").val(unescape(searchStr.substr(2)));
+        }
+
+            $("#changelist-search").submit(function(){
+            var v=$("#searchbar")[0].value;
+            if(v=='')
+            window.location.href=getQueryStr(locations,["q","p"]);
+            else
+            window.location.href=getQueryStr(locations,["q","p"],"q="+escape(v));
+            return false;
+        });
+            var to=$.cookie("show"); 
+            $("input[@type=radio]","#id_show_style").each(function(){
+            if(to==$(this).val() && typeof(showBox)=='function')
+            $(this).attr("checked","checked")
+            if($.cookie("depart")=='tree' && to!=0)
+            $(this).attr("checked","checked");
+        });
+            setShowStyle();
+            $("input[@type=radio]","#id_show_style").click(setShowStyle);
+        });
+
+            function setShowStyle(){
+            var to=$.cookie("show");
+            if($(this).attr("alt")=='tree'){
+            $.cookie("depart", $(this).attr('alt'), { expires: 7 });
+            $.cookie("show", $(this).val(), { expires: 7 });
+        }
+            else if($(this).attr("checked") && $(this).val()!=to){
+            $.cookie("show", $(this).val(), { expires: 7 });
+        }
+            if($.cookie("show")==1 && typeof(showBox)=='function')
+            {
+            $("#id_showTbl").parent().find("#id_showTbl").html('<td colspan="2"><div id="iclockBox" class="box">'+showBox(data)+'</div></td>');
+            renderTbl(data, options);
+            $("#id_select_div").before('<div><input type="checkbox" class="class_select_all" onclick="check_all_for_row(this.checked);" />{% trans "Select All"%}</div>')
+        }
+            else if($.cookie("depart")=='tree' && $.cookie("show")==1)
+            {
+            $("#id_searchbar").css("display","none");
+            $("#id_showTbl").parent().find("#id_showTbl").html('<td colspan="2"><div id="show_dept_emp_tree"></div></td>')
+            getDept_to_show_emp(400);
+        }
+            else
+            {    
+            $("#id_searchbar").css("display","inline");
+            $("#id_showTbl").parent().find("#id_showTbl").html('<td colspan=2 style="padding: 0px;"><table id="tbl" width="100%" border="1" ></table></div>')
+            renderTbl(data, options);
+        }
+    
+        }
+
+            function exportData(url, value)
+            {
+            url=getQueryStr(window.location.href, [url], url+'='+value);
+            window.location.href=url;
+        }
+            function exportRec()
+            {
+            createDialog('f', setDataFilter, dataExportsFormats, "{%trans "Export"%} {{ title }} {%trans "list"%}", "{%trans "format"%}", 350,true);
+        }
+
+
+
+</script>
+
+{% endblock %}
+
+{% block content %}
+<div class="module" style="position: relative;height: 10px; width: 100%;">
+    <table style="margin-bottom: 2px;margin-top: 10px; float: left; width: 100%;">
+        <tr class="panel-header">
+            <td>
+                <span style="font-size: 15px;margin-top: -5px; padding-right: 20px;"><b>{{ dataOpt.verbose_name|cap }}</b></span>
+            </td>
+            <td align="right">
+                <form method="get" action="" id="changelist-search">
+                    <div id="id_line">
+                        <!-- DIV needed for valid HTML -->
+                        <span id="id_show_style">{% trans "Style:"%}<input type="radio" name="showStyle" value="0" checked />{% trans "List style" %}
+                        <input type="radio" name="showStyle" value="1" />{% trans "Table style" %}&nbsp;&nbsp;
+
+                        </span>
+                        <span id="id_searchbar">{% if cl.searchHint %}
+                            <input type="text" id="searchbar" value="" name="q" size="25" title="{%trans 'Search by:'%} {{ cl.searchHint }}" />
+                            <input type="submit" value="" title="{%trans "Search"%}" style="background:url(/iclock/media/img/icon_searchbox.png) left 50% no-repeat; padding-left: 20px; padding-right: 5px; width:20px;height:20px;border: 0;" />
+                            {% endif %}
+                        </span>
+
+                    </div>
+                </form>
+            </td>
+
+        </tr>
+    </table>
+    <table id="changelist" border="0" style="margin-bottom: 2px;margin-top: -2px; float: left; width: 100%;">
+        <tr id="toolbar"  style="padding: 5px;height: auto;">
+            
+            <td colspan="2" style="padding: 0px;">
+                <div class="datagrid-toolbar">
+                <div id="filter" style="height: 36px;">
+                    <span style="float: left; font-size: 10pt; margin-top: 6px;margin-left: 6px;"><b>{%trans "Filter By:&nbsp;&nbsp;"%}</b></span>
+                    <span id="id_filterbar" class="nav">{% block filters %}{% filters cl %}{% endblock %}
+                    </span>
+                </div>
+                <div id="divPage" style="height: 27px;display: block;">
+
+                    <span style="float: left">{% block obj_tools %}
+                        {% endblock %}
+
+                        <a type="button" id="id_export" class="cls_op easyui-linkbutton" data-options="iconCls:'icon-redo',plain:true" href="javascript: exportRec();" value="{%trans "Export"%}" style="display: none;">{%trans "Export"%}</a>
+
+                        {% if request|reqHasPerm:"add" %}
+                        <a type="button" id="id_newrec" data-options="iconCls:'icon-add',plain:true" class="cls_op easyui-linkbutton" href="javascript: window.location.href='_new_/';" class="addlink" value="{%trans "Append"%}" > {%trans "Append"%}</a>
+                    
+                        {% else %}
+                        <!--<a type="button" id="A8" class="cls_op easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" class="addlink" value="{%trans "Append"%}" disabled />-->
+                        {% endif %}
+                        {% if delOldRecDays %}
+                        <a id="A10" class="cls_op easyui-linkbutton" data-options="iconCls:'icon-no',plain:true"  type="button" value="{%trans "Delete out-of-date records"%}" href="javascript: delOldRec({{ delOldRecDays }});">{%trans "Delete out-of-date records"%}</a>
+                        {% endif %}
+                        {% block extraBatchOp %}{% endblock %}
+                    </span>
+
+                    <span class="selectedDataOp" style="float: left; text-align: left;">
+                        <div id="id_defSelectDataOp" style="margin-right: 10px; float: left;">
+                        </div>
+                        <div class="nav" id="op_menu_div" style="display: none; margin-left: 10px; float: left; position: absolute;">
+                            <li><a href="javascript:void(0);" class="easyui-splitbutton l-btn-plain">{%trans "Operation for selected"%}&nbsp;</a>
+                                <ul id="op_menu">
+                                    <li><a href="javascript:void(0);">Test1</a></li>
+                                </ul>
+                            </li>
+                        </div>
+
+                    </span>
+                </div>
+                    </div>
+            </td>
+        </tr>
+
+
+        <tr id="id_showTbl">
+            <td colspan="2" style="padding: 0px;">
+                <table id="tbl" width="100%" border="1">
+                </table>
+            </td>
+
+        </tr>
+    </table>
+    <table style="margin-bottom: 2px;margin-top: -2px; float: left; width: 100%;">
+        <tr class="datagrid-pager">
+            <td colspan="2">
+                <div id="pages" style="clear: both;display: none; margin-left: auto;margin-right: auto;float: left;width: 400px;"></div>
+                <div class="datagrid-pager pagination" style="vertical-align: central; text-align: left;" >
+                    <table id="pager" cellspacing="0" cellpadding="0" style="text-align: left;float: left;width: 650px;height: 30px;vertical-align: central !important;padding: 0px;margin-left: 30px;" >
+                        <tbody>
+                            <tr>
+                                <td style="width: 140px;">
+                                    <span>Quantity:
+                                    <select id="Quantity" vallue="{{ limit }}"  class="pagination-page-list" style="width: 56px;" onchange="goPageByLimit(value)" ><!--onselect="goPageByLimit(value)"--><!--value="{{ limit }}"-->
+                                        <option value="50" >50</option>
+                                        <option value="100">100</option>
+                                        <option value="150">150</option>
+                                        <option value="200">200</option>
+                                    </select></span>
+                                </td>
+                                <td>
+                                    <div class="pagination-btn-separator"></div>
+                                </td>
+                                <td><a href="javascript:gotoPage2(1)" class="l-btn l-btn-plain" id=""><span class="l-btn-left"><span class="l-btn-text"><span class="l-btn-empty pagination-first">&nbsp;</span></span></span></a></td>
+                                <td><a href="javascript:gotoPagepre()" class="l-btn l-btn-plain" id="A1"><span class="l-btn-left"><span class="l-btn-text"><span onclick="gotoPagepre()" class="l-btn-empty pagination-prev">&nbsp;</span></span></span></a></td>
+                                <td>
+                                    <div class="pagination-btn-separator"></div>
+                                </td>
+                                <td><span style="padding-left: 6px;">Page</span></td>
+                                <td>
+                                    <input class="pagination-num" type="text" value="{{ page }}" size="2" width="30px"  onkeypress="return gotoPage(event,undefined)"></td>
+                                <td><span style="padding-right: 6px;">of {{ page_count }}</span></td>
+                                <td>
+                                    <div class="pagination-btn-separator"></div>
+                                </td>
+                                <td><a href="javascript:gotoPagenxt()" class="l-btn l-btn-plain" id="A2"><span class="l-btn-left"><span class="l-btn-text"><span onclick="gotoPagenxt()" class="l-btn-empty pagination-next">&nbsp;</span></span></span></a></td>
+                                <td><a href="javascript:gotoPage2({{ page_count }})" class="l-btn l-btn-plain" id="A3"><span class="l-btn-left"><span class="l-btn-text"><span class="l-btn-empty pagination-last">&nbsp;</span></span></span></a></td>
+                                <td>
+                                    <div class="pagination-btn-separator"></div>
+                                </td>
+                                <td><a href="javascript:window.location.href=window.location.href" class="l-btn l-btn-plain" id="A4"><span class="l-btn-left"><span class="l-btn-text"><span class="l-btn-empty pagination-load">&nbsp;</span></span></span></a></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination-info" style="margin-right: 30px !important;">{{ item_count }} items</div>
+                    <div style="clear: both;"></div>
+                </div>
+            </td>
+
+        </tr>
+    </table>
+</div>
+<div id="id_tip" class="tip"></div>
+<br class="clear" />
+<script>
+    $(function() {
+        $("#Quantity").val({{ limit }});
+        $(".pagination-num").val({{ page }});
+    })
+            
+    function gotoPagenxt() {
+        var pnum = parseInt($('.pagination-num').val());
+        if (isNaN(pnum)) pnum = 1;
+        pnum = pnum + 1;
+        if (pnum>{{ page_count }}) {
+            pnum={{ page_count }};
+        }
+        gotoPage2(pnum);
+    
+    }
+    
+    
+
+</script>
+{% block extraSection %}{% endblock %}
+
+{% endblock %}
+

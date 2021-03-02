@@ -1,0 +1,14 @@
+*************************************************************************************************************************************************
+*							Format	Template	About	ImportEmp							*
+*************************************************************************************************************************************************
+For example:
+
+PIN	First Name	Last Name	Department Number	#This is Header Line which is required and don't edit it, just be required once.
+1234,	FN1,		LN1,		1,		#This is Data Line,the elements are separated by  "comma"and one or more "tab" character, nerver use other characters.
+5678,	FN2,		LN2,		,		#If some elements are empty, the separated characters is still be required.
+A123,	FN3,		LN3,		3,		#This is also Data Line.
+*************************************************************************************************************************************************
+*							Warnnig:  Do not edit or delete the above content.							*
+*								Start editing from the below content.							*
+*************************************************************************************************************************************************
+PIN	First Name	Last Name	Department Number	#This is Header Line which is required and don't edit it.

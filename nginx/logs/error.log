@@ -1,0 +1,4 @@
+2015/03/27 17:52:41 [notice] 40064#40068: signal process started
+2015/03/27 17:52:41 [error] 40064#40068: OpenEvent("ngx_stop_2980") failed (2: The system cannot find the file specified)
+2015/08/03 11:06:13 [notice] 6484#6488: signal process started
+2015/08/03 11:06:13 [error] 6484#6488: OpenEvent("ngx_stop_40096") failed (2: The system cannot find the file specified)

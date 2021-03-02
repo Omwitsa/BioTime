@@ -1,0 +1,133 @@
+Metadata-Version: 1.0
+Name: isapi-wsgi
+Version: 0.4.2
+Summary: A WSGI handler for ISAPI
+Home-page: http://code.google.com/p/isapi-wsgi
+Author: Mark Rees
+Author-email: mark dot john dot rees at gmail dot com
+License: MIT
+Description: ISAPI WSGI 0.4.2
+        ==============
+        
+        License
+        =======
+        
+        ISAPI WSGI is licenced under the `MIT License
+        <http://www.opensource.org/licenses/mit-license.php>`_.
+        
+        Description
+        ===========
+        
+        ISAPI WSGI is an implementation of WSGI (PEP 333) for running as an
+        ISAPI extension under IIS. WSGI is considered as important standard
+        for the future of web deployed Python code. There are implementations
+        for CGI, mod_python, twisted, jython, etc.  This was the first
+        implementation for IIS/ISAPI.
+        
+        Dependencies
+        ============
+        
+        ISAPI WSGI is currently dependent on Mark Hammond's Python win32
+        isapi extension, available in the
+        `Python for Windows Extensions project
+        <http://sourceforge.net/projects/pywin32>`_.
+        
+        Status
+        ======
+        
+        Thanks to contributions from the communitity, there are two
+        implementations.  One is single-threaded; the other is multi-threaded.
+        
+        It has been used to run simple python wsgi applications thru to
+        applications developed using the Django, Pylons and TurboGears frameworks.
+        
+        More details can be read on the `project page
+        <http://google.code.com/p/isapi-wsgi>`_.
+        
+        Released versions are available from the project code site and PyPI.  Just
+        ``easy_install isapi-wsgi``.
+        
+        Development
+        ===========
+        
+        Download the latest version from the `subversion repository
+        <http://isapi-wsgi.googlecode.com/svn/trunk#egg=isapi-wsgi-dev>`_ or
+        install it using ``easy_install isapi-wsgi-dev``.
+        
+        Mailing List
+        ============
+        
+        `A mailing list <http://groups.google.com/group/isapi_wsgi-dev>`_
+        is maintained using google groups.
+        
+        Maintainer
+        ==========
+        
+        `Mark Rees <http://hex-dump.blogspot.com>`_ mark dot john dot rees at
+        gmail dot com
+        
+        Changes
+        =======
+        
+        0.4.2
+        ~~~~~
+        
+        Replicate ecb server varible HTTPS in wsgi environment so Trac and Mercurial can use isapi_wsgi over https.
+        
+        0.4.1
+        ~~~~~
+        
+        Make manipulation of ECB server variable APPL_MD_PATH case insensitive as string case appears to
+        be IIS version/installation dependent.
+        
+        Add serving from IIS root example - examples\demo_serve_from_root.py
+        
+        0.4
+        ~~~
+        
+        Improved virtual directory support:
+        
+        Application can now be deployed to any level of the IIS directory structure including the root.
+        
+        SCRIPT_NAME is now set properly (to the app root if it's a `*`-mapped script handler)
+        
+        Added Python 3.0 compatibility
+        
+        First release to PyPI
+        
+        Set IIS REMOTE_ADDR env variable as part of WSGI environment.
+        
+        Add optional size argument to wsgi.input's readline(). This is not part of WSGI spec, but stdlib
+        cgi.py now requires it.
+        
+        0.3
+        ~~~
+        
+        Apply Chris Lambacher's first set of patches:
+        
+        ISAPISimpleHandler creates handler object per request.
+        
+        ISAPIThreadPoolHandler where the wsgi requests are run on worker threads from the thread pool.
+        
+        App now serves from VirtualDirectory root by default.
+        
+        0.2 First beta release
+        ~~~~~~~~~~~~~~~~~~~~~~
+        
+        Added qwip_test.py as an example for running quixote apps via QWIP.
+        
+        Update README.txt to reflect new example.
+        
+        Added basic error handling to cope with Extension Errors that are generated
+        when a client disconnects before the extension i/o has finished.
+        
+        Reset self.headers and self.headers_sent in HttpExtensionProc so wsgi states are
+        correct if Extension Error occurred in previous call.
+        
+        0.1
+        ~~~
+        
+        Change write method so it uses ecb.WriteClient rather than print redirection
+        which was causing an Extension Error when running QWIP apps.
+        
+Platform: UNKNOWN

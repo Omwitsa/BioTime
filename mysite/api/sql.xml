@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sqlgroup>
+    <sql id = "checkinout">
+        <content engine = "default">
+            <![CDATA[
+                select c.id, u.badgenumber, u.name, c.checktime, c.checktype, c.verifycode, c.WorkCode, c.Reserved, c.SN, c.company_id, z.companyname
+                from checkinout c
+                left join userinfo u on c.userid = u.userid
+                left join company z on c.company_id = z.companyid
+                where 1=1 
+            ]]>
+        </content>
+        <content engine = "sqlserver">
+            <![CDATA[
+                select top 100 percent
+                c.id, u.badgenumber, u.name, c.checktime, c.checktype, c.verifycode, c.WorkCode, c.Reserved, c.SN, c.company_id, z.companyname
+                from checkinout c
+                left join userinfo u on c.userid = u.userid
+                left join company z on c.company_id = z.companyid
+                where 1=1 
+            ]]>
+        </content>  
+    </sql>
+    <sql id = "checkinout_count">
+        <content engine = "default">
+            <![CDATA[
+                select count(1) from checkinout c
+                left join userinfo u on c.userid = u.userid
+                left join company z on c.company_id = z.companyid
+                where 1=1 
+            ]]>
+        </content>
+    </sql>
+    <sql id = "userinfo">
+        <content engine = "default">
+            <![CDATA[
+                select u.userid, u.badgenumber, u.name, u.Gender, u.Card, u.Password, z.companyid, z.companyname, d.DeptID, d.DeptName, (select count(1) from template where userid = u.userid) as fpCount,
+                (select count(1) from template2 where userid = u.userid) as faceCount
+                from userinfo u
+                left join departments d on u.defaultdeptid = d.DeptID
+                left join company z on u.company_id = z.companyid
+                where 1=1 
+            ]]>
+        </content>
+        <content engine = "sqlserver">
+            <![CDATA[
+                select top 100 percent
+                u.userid, u.badgenumber, u.name, u.Gender, u.Card, u.Password, z.companyid, z.companyname, d.DeptID, d.DeptName,
+                (select count(1) from template where userid = u.userid) as fpCount,
+                (select count(1) from template2 where userid = u.userid) as faceCount
+                from userinfo u
+                left join departments d on u.defaultdeptid = d.DeptID
+                left join company z on u.company_id = z.companyid
+                where 1=1 
+            ]]>
+        </content>  
+    </sql>
+    <sql id = "user_count">
+        <content engine = "default">
+            <![CDATA[
+                select count(1) from userinfo u
+                left join departments d on u.defaultdeptid = d.DeptID
+                left join company z on u.company_id = z.companyid
+                where 1=1 
+            ]]>
+        </content>
+    </sql>
+</sqlgroup>

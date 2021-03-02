@@ -1,0 +1,1488 @@
+Service AttServer installed
+Ran service AttServer.
+Service AttServer removed
+Killed service AttServer.
+Service AttServer installed
+Ran service AttServer.
+Service AttServer removed
+Killed service AttServer.
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+argc= 3,argv[1]=-r
+Failed to kill service AttServer.
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 3,argv[1]=-k
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 3,argv[1]=-k
+argc= 2,argv[1]=-u
+Service AttServer removed
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+Killed service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 2,argv[1]=-u
+Service AttServer removed
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 3,argv[1]=-k
+argc= 2,argv[1]=-u
+Service AttServer removed
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 2,argv[1]=-u
+Service AttServer removed
+argc= 3,argv[1]=-k
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 3,argv[1]=-k
+argc= 2,argv[1]=-u
+Service AttServer removed
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 3,argv[1]=-k
+argc= 2,argv[1]=-u
+Service AttServer removed
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 3,argv[1]=-k
+argc= 2,argv[1]=-u
+Service AttServer removed
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 2,argv[1]=-u
+Service AttServer removed
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+Killed service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 2,argv[1]=-u
+Service AttServer removed
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 2,argv[1]=-u
+Service AttServer removed
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 3,argv[1]=-k
+argc= 2,argv[1]=-u
+Service AttServer removed
+Killed service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 3,argv[1]=-k
+OpenService failed, error code = 1060
+Failed to kill service AttServer.
+argc= 2,argv[1]=-u
+OpenService failed, error code = 1060
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+Killed service AttServer.
+sucess
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 2,argv[1]=-u
+Service AttServer removed
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 2,argv[1]=-i
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 2,argv[1]=-i
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 2,argv[1]=-i
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 2,argv[1]=-i
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 2,argv[1]=-i
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 3,argv[1]=-k
+argc= 2,argv[1]=-u
+Service AttServer removed
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 2,argv[1]=-u
+Service AttServer removed
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 2,argv[1]=-u
+Service AttServer removed
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 2,argv[1]=-u
+argc= 3,argv[1]=-k
+Service AttServer removed
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-r
+argc= 3,argv[1]=-k
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+Killed service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+argc= 2,argv[1]=-u
+Service AttServer removed
+Failed to kill service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 2,argv[1]=-u
+Service AttServer removed
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 3,argv[1]=-k
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+StartServiceCtrlDispatcher sucess
+begin to Run service AttServer.
+Killed service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartServiceCtrlDispatcher sucess
+StartService failed, error code = 1056
+Killed service AttServer.
+Failed to run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 3,argv[1]=-k
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 3,argv[1]=-k
+argc= 2,argv[1]=-u
+Service AttServer removed
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 3,argv[1]=-k
+argc= 2,argv[1]=-u
+Killed service AttServer.
+StartServiceCtrlDispatcher sucess
+Service AttServer removed
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 3,argv[1]=-k
+argc= 2,argv[1]=-u
+Service AttServer removed
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-u
+Service AttServer removed
+argc= 3,argv[1]=-k
+Killed service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-u
+argc= 3,argv[1]=-k
+Service AttServer removed
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1058
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1058
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1058
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1058
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1058
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1058
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1058
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1058
+Failed to run service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1058
+Failed to run service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1058
+Failed to run service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1058
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1058
+Failed to run service AttServer.
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1058
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1058
+Failed to run service AttServer.
+argc= 3,argv[1]=-k
+ControlService failed, error code = 1062
+Failed to kill service AttServer.
+argc= 2,argv[1]=-u
+Service AttServer removed
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 2,argv[1]=-i
+Failed to create service AttServer, error code = 1073
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+StartService failed, error code = 1056
+Failed to run service AttServer.
+argc= 3,argv[1]=-k
+argc= 2,argv[1]=-u
+Service AttServer removed
+StartServiceCtrlDispatcher sucess
+Killed service AttServer.
+argc= 2,argv[1]=-i
+Service AttServer installed
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+Run service AttServer.
+StartServiceCtrlDispatcher sucess
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 1,argv[1]=(null)
+begin to StartServiceCtrlDispatcher 
+argc= 2,argv[1]=-i
+OpenSCManager failed, error code = 5
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+OpenSCManager failed, error code = 5
+Failed to run service AttServer.
+argc= 3,argv[1]=-k
+OpenSCManager failed, error code = 5
+argc= 3,argv[1]=-r
+begin to Run service AttServer.
+Failed to kill service AttServer.
+OpenSCManager failed, error code = 5
+Failed to run service AttServer.
+argc= 3,argv[1]=-k
+argc= 2,argv[1]=-u
+OpenSCManager failed, error code = 5
+OpenSCManager failed, error code = 5
+Failed to kill service AttServer.
+12/27/2012, 14:19:53
+    F:\实验\ADMS(v3.1-155-MSSQL)\iclocksvr\iclockserver.exe
+12/27/2012, 14:19:53
+    F:\实验\ADMS(v3.1-155-MSSQL)\iclocksvr\iclockserver.log
+12/27/2012, 14:19:53
+    F:\实验\ADMS(v3.1-155-MSSQL)\iclocksvr\iclockserver.ini
+12/27/2012, 14:19:56
+    Service AttServer installed
+12/27/2012, 14:19:56
+    F:\实验\ADMS(v3.1-155-MSSQL)\iclocksvr\iclockserver.exe
+12/27/2012, 14:19:56
+    F:\实验\ADMS(v3.1-155-MSSQL)\iclocksvr\iclockserver.log
+12/27/2012, 14:19:56
+    F:\实验\ADMS(v3.1-155-MSSQL)\iclocksvr\iclockserver.ini
+12/27/2012, 14:19:56
+    begin to Run service AttServer.
+12/27/2012, 14:19:56
+    F:\实验\ADMS(v3.1-155-MSSQL)\iclocksvr\iclockserver.exe
+12/27/2012, 14:19:56
+    F:\实验\ADMS(v3.1-155-MSSQL)\iclocksvr\iclockserver.log
+12/27/2012, 14:19:56
+    F:\实验\ADMS(v3.1-155-MSSQL)\iclocksvr\iclockserver.ini
+12/27/2012, 14:19:56
+    begin to StartServiceCtrlDispatcher 
+12/27/2012, 14:19:56
+    F:\实验\ADMS(v3.1-155-MSSQL)\iclocksvr\python26\python.exe svr8000.py
+12/27/2012, 14:19:56
+    Run service AttServer.
+12/27/2012, 14:19:56
+    F:\实验\ADMS(v3.1-155-MSSQL)\iclocksvr\python26\python.exe svr8000.py
+12/27/2012, 14:20:00
+    F:\实验\ADMS(v3.1-155-MSSQL)\iclocksvr\iclockserver.exe
+12/27/2012, 14:20:00
+    F:\实验\ADMS(v3.1-155-MSSQL)\iclocksvr\iclockserver.log
+12/27/2012, 14:20:00
+    F:\实验\ADMS(v3.1-155-MSSQL)\iclocksvr\iclockserver.ini
+12/27/2012, 14:20:00
+    F:\实验\ADMS(v3.1-155-MSSQL)\iclocksvr\iclockserver.exe
+12/27/2012, 14:20:00
+    F:\实验\ADMS(v3.1-155-MSSQL)\iclocksvr\iclockserver.log
+12/27/2012, 14:20:00
+    F:\实验\ADMS(v3.1-155-MSSQL)\iclocksvr\iclockserver.ini
+12/27/2012, 14:20:00
+    Service AttServer removed
+12/27/2012, 14:20:00
+    F:\实验\ADMS(v3.1-155-MSSQL)\iclocksvr\nginx\nginx.exe
+12/27/2012, 14:20:00
+    Killed service AttServer
+01/17/2013, 16:47:21
+    F:\实验\ADMS(v3.1-159-MSSQL)\iclocksvr\iclockserver.exe
+01/17/2013, 16:47:21
+    F:\实验\ADMS(v3.1-159-MSSQL)\iclocksvr\iclockserver.log
+01/17/2013, 16:47:21
+    F:\实验\ADMS(v3.1-159-MSSQL)\iclocksvr\iclockserver.ini
+01/17/2013, 16:47:22
+    Service AttServer installed
+01/17/2013, 16:47:22
+    F:\实验\ADMS(v3.1-159-MSSQL)\iclocksvr\iclockserver.exe
+01/17/2013, 16:47:22
+    F:\实验\ADMS(v3.1-159-MSSQL)\iclocksvr\iclockserver.log
+01/17/2013, 16:47:22
+    F:\实验\ADMS(v3.1-159-MSSQL)\iclocksvr\iclockserver.ini
+01/17/2013, 16:47:22
+    begin to Run service AttServer.
+01/17/2013, 16:47:22
+    F:\实验\ADMS(v3.1-159-MSSQL)\iclocksvr\iclockserver.exe
+01/17/2013, 16:47:22
+    F:\实验\ADMS(v3.1-159-MSSQL)\iclocksvr\iclockserver.log
+01/17/2013, 16:47:22
+    F:\实验\ADMS(v3.1-159-MSSQL)\iclocksvr\iclockserver.ini
+01/17/2013, 16:47:22
+    begin to StartServiceCtrlDispatcher 
+01/17/2013, 16:47:22
+    F:\实验\ADMS(v3.1-159-MSSQL)\iclocksvr\python26\python.exe svr8000.py
+01/17/2013, 16:47:22
+    Run service AttServer.
+01/17/2013, 16:47:22
+    F:\实验\ADMS(v3.1-159-MSSQL)\iclocksvr\python26\python.exe svr8000.py
+01/17/2013, 16:47:37
+    F:\实验\ADMS(v3.1-159-MSSQL)\iclocksvr\iclockserver.exe
+01/17/2013, 16:47:37
+    F:\实验\ADMS(v3.1-159-MSSQL)\iclocksvr\iclockserver.log
+01/17/2013, 16:47:37
+    F:\实验\ADMS(v3.1-159-MSSQL)\iclocksvr\iclockserver.ini
+01/17/2013, 16:47:37
+    F:\实验\ADMS(v3.1-159-MSSQL)\iclocksvr\iclockserver.exe
+01/17/2013, 16:47:37
+    F:\实验\ADMS(v3.1-159-MSSQL)\iclocksvr\iclockserver.log
+01/17/2013, 16:47:37
+    F:\实验\ADMS(v3.1-159-MSSQL)\iclocksvr\iclockserver.ini
+01/17/2013, 16:47:37
+    Service AttServer removed
+01/17/2013, 16:47:37
+    F:\实验\ADMS(v3.1-159-MSSQL)\iclocksvr\nginx\nginx.exe
+01/17/2013, 16:47:37
+    Killed service AttServer

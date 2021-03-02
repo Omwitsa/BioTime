@@ -1,0 +1,43 @@
+{% extends "data_edit.html" %}
+
+{% block addjs %}
+$(function(){
+	var pid=$("#id_company").val()
+	{% if not add %}
+	var html='<input type="hidden" value="'+ pid +'" name="company" id="id_company"><select  disabled="disabled"><option value="">---------</option>'+
+	{% else %}
+	var html='<select name="company" id="id_company"><option value="">---------</option>'+
+	{% endif %}
+	{% for row in Company_list %}'<option value="{{ row.companyid }}" '+({{ row.companyid }}==pid?'selected':'')+'>{{ row }}</option>'+
+	{% endfor %}'</select>';
+	$("#id_company").parent().html(html)
+
+	var pid=$("#id_parent").val()
+	var html='<select name="parent" id="id_parent"><option value="">---------</option>'+
+	{% for row in parent_dept_list %}'<option value="{{ row.DeptID }}" '+({{ row.DeptID }}==pid?'selected':'')+'>{{ row }}</option>'+
+	{% endfor %}'</select>';
+	$("#id_parent").parent().html(html)
+	$('#id_edit_form').validate({
+		rules: {
+			"DeptID": {"digits":true,"minValue":1,"maxLength":5,"maxValue":65534}
+		}
+	});
+{% if not add %}
+	$('#id_DeptID').attr('readonly', true);
+{% endif %}
+
+});
+{% endblock %}
+
+{% block spechar %}
+<script>
+function SpcharFunction(){
+        var deptname = document.getElementById("id_DeptName").value;
+        var patt1 = new RegExp("['\"!~@#\$\?%\^\\\\/=<>:`\(\)\{\}\*\|\+\\[\\]\&]");
+        if (patt1.test(deptname)){
+            alert("Dept Name contains illegal characters.");
+            return false;
+        }
+}
+</script>
+{% endblock %}

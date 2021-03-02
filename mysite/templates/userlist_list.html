@@ -1,0 +1,9 @@
+{% extends "data_list.html" %}
+{% block tblHeader %}
+fieldHeaders=["<th abbr='Index'>Index</th>","{{ cl.FieldName.user }}","{{ cl.FieldName.username }}","{{ cl.FieldName.userpwd }}","{{ cl.FieldName.usercard }}","{{ cl.FieldName.userpri }}","{{ cl.FieldName.device }}"
+];
+{% endblock %}
+{% block rowdata %}
+{% for item in latest_item_list %}
+[{{item.id}},"{{ item.user }}","{{ item.username }}","{{ item.userpwd }}","{{ item.usercard }}","{{ item.get_userpri_display }}","{{ item.device }}"]{%if not forloop.last%},{%endif%}{% endfor %}
+{% endblock %}
